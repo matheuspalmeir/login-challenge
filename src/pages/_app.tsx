@@ -1,4 +1,5 @@
 
+import 'antd/dist/antd.css';
 import {GlobalStyle} from './mainStyle';
 
 const App = ({ Component, pageProps }) => {

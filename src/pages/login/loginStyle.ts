@@ -14,8 +14,7 @@ export const LoginButton = style(Button)`
 `;
 
 export const FormItemLabel = style.label`
-    font-size: 10px;
-    line-height: 48px;
+    font-size: 10px !important;
 `
 
 export const ContainerLogin = style.div`
@@ -31,12 +30,12 @@ export const InputLogin = style(Input)`
     border: 1px solid #989FDB;
     box-sizing: border-box;
     border-radius: 8px;
-    font-size: 10px;
-    line-height: 48px;
+    line-height: 45px;
+    width: 256px;
+    font-size: 11px;
+    color: #989FDB;
 `
 
 export const LoginLink = style.a`
     color: #bb74cb;
-
 `
-

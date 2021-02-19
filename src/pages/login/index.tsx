@@ -1,44 +1,15 @@
-import {Form} from 'antd';
-import {ChallengeButton, ChallengeContainer} from '../mainStyle';
-import {InputLogin, FormItemLabel, InputPassword, LoginLink } from './style';
+import Footer from '../../components/login/Footer';
+import Header from '../../components/login/Header';
+import LoginForm from '../../components/login/LForm';
+import {ChallengeContainer} from '../mainStyle';
 
 
 const LoginPage = () => {
     return(
         <ChallengeContainer>
-            <Form>
-                <Form.Item
-                    label={<FormItemLabel>E-MAIL</FormItemLabel>}
-                    rules={[
-                        {
-                        type: 'email',
-                        message: 'Por favor, digite um e-mail válido!',
-                        },
-                        {
-                        required: true,
-                        message: 'Por favor, digite seu e-mail',
-                        },
-                    ]}
-                >
-                    <InputLogin />
-                </Form.Item>
-                <Form.Item
-                    name="password"
-                    label={<FormItemLabel>SENHA</FormItemLabel>}
-                    rules={[
-                    {
-                        required: true,
-                        message: 'Por favor, digite sua senha!',
-                    },
-                    ]}
-                    hasFeedback
-                >
-                    <InputPassword />
-                </Form.Item>
-                <Form.Item>
-                    <ChallengeButton>ENTRAR</ChallengeButton> 
-                </Form.Item>
-            </Form>
+            <Header />
+            <LoginForm />
+            <Footer/>
         </ChallengeContainer>
     )
 }
