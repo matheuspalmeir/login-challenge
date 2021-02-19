@@ -1,12 +1,7 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 import {Input, Button} from 'antd';
 
-
-interface SiderImageProp {
-    path: string;
-}
-
-export const LoginButton = style(Button)`
+export const LoginButton = styled(Button)`
     width: 256px;
     height: 48px;
     left: 877px;
@@ -17,12 +12,12 @@ export const LoginButton = style(Button)`
     color: #FFFF;
 `;
 
-export const FormItemLabel = style.label`
+export const FormItemLabel = styled.label`
     font-size: 10px !important;
     padding-left: 10px;
 `
 
-export const InputLogin = style(Input)`
+export const InputLogin = styled(Input)`
     border: 1px solid #989FDB;
     box-sizing: border-box;
     border-radius: 8px;
@@ -32,7 +27,7 @@ export const InputLogin = style(Input)`
     color: #989FDB;
 `
 
-export const LoginLink = style.a`
+export const LoginLink = styled.a`
     color: #bb74cb;
     font-weight: bold;
     text-decoration: underline;
@@ -42,7 +37,7 @@ export const LoginLink = style.a`
     }
 `
 
-export const ContainerHeader = style.div`
+export const ContainerHeader = styled.div`
     width: 256px;
     display: flex;
     flex-direction: column;
@@ -50,7 +45,7 @@ export const ContainerHeader = style.div`
     margin-bottom: 27px;
 `
 
-export const ContainerFooter = style.div`
+export const ContainerFooter = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,10 +56,9 @@ export const ContainerFooter = style.div`
         padding: 0px;
         margin: 0px;
     }
-`
 
-export const SiderImage = style.div<SiderImageProp>`
-    background: #130525;
-    background-image: url(${props => props.path}); /* fallback */
-    background-image: url(${props => props.path}), linear-gradient(180deg, #130525 0%, rgba(105, 57, 153, 0) 100%); 
+    @media screen and (max-width: 375px){
+        position: absolute;
+        bottom: -20%;
+    }
 `

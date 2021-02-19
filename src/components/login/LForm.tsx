@@ -36,16 +36,11 @@ const LForm = () => {
             name="password"
             label={<FormItemLabel>SENHA</FormItemLabel>}
             rules={[
-            {
-                required: true,
-                message: 'Por favor, digite sua senha!',
-            },
-            {
-                pattern: new RegExp('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/'),
-                message: 'Sua senha deve conter ao menos um dígito, maiuscúla, minúscula, caracter especial e 8 caracteres!'
-            }
+                {
+                    required: true,
+                    message: 'Por favor, digite sua senha!',
+                }
             ]}
-            //hasFeedback
         >
             <InputLogin 
                 prefix={<LockOutlined className="site-form-item-icon" />}

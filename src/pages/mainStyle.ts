@@ -83,23 +83,38 @@ export const ChallengeButton = styled(Button)`
     :after{
         animation: pulse 0.2s 1 ease-out;
     }
+
+    @media screen and (max-width: 375px){
+        position: absolute;
+        width: 168px;
+        left: 18%;
+        top: 30px;
+        box-shadow: none;
+    };
 `;
 
 export const ChallengeContainer = styled.div<PropContainer>`
-width: 100%;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: ${props => props.aligment || 'center'};;
-flex-direction: column;
-margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: ${props => props.aligment || 'center'};;
+    flex-direction: column;
+    padding-top: 30px;
 `
 
 export const Title = styled.div<PropFontSize>`
-  font-size: ${props => props.size || '48px'};
-  line-height: 48px;
-  color: ${props => props.fontColor};
-  margin-bottom: 15px;
+    font-size: ${props => props.size || '48px'};
+    line-height: 48px;
+    color: ${props => props.fontColor};
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 375px){
+        font-size: 24px;
+        line-height: 30px;
+
+    };
+
 `
 
 export const Subtitle = styled.div<PropFontSize>`
@@ -109,6 +124,11 @@ export const Subtitle = styled.div<PropFontSize>`
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 0em;
-  margin-bottom: 10px;
+
+    @media screen and (max-width: 375px){
+        font-size: 12px;
+        line-height: 20px;
+
+    };
   
 `

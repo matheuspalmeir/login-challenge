@@ -5,6 +5,7 @@ interface SiderProp {
 }
 
 const Sider = (props: SiderProp) => {
+    console.log("Url:", props.url);
     return(
         <SiderImage path={props.url} />
     )
