@@ -43,6 +43,11 @@ export const ContainerHeader = styled.div`
     flex-direction: column;
     align-items: left;
     margin-bottom: 27px;
+
+    @media screen and (max-width: 414px){
+        margin-bottom: 10px;
+        align-items: center;
+    }
 `
 
 export const ContainerFooter = styled.div`
@@ -57,7 +62,7 @@ export const ContainerFooter = styled.div`
         margin: 0px;
     }
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 414px){
         position: absolute;
         bottom: -20%;
     }

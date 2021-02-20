@@ -10,7 +10,7 @@ export const LayoutContainer = styled.div`
     width: 100vw;
     height: 100vh;
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 414px){
         display: block;
     };
 `;
@@ -25,15 +25,19 @@ export const LayoutContent = styled.div`
         width: 60%;
     };
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 414px){
         width: 312px;
-        height: 382px;
+        height: 352px;
         position: absolute;
-        bottom: 7%;
-        left: 8%;
+        bottom: 11%;
+        left: 12%;
         background-color: #FAF5FF;
         border-radius: 8px;
         margin: 0 auto;
+    };
+
+    @media screen and (max-width: 375px){
+        left: 8%;
     };
 `
 
@@ -52,7 +56,7 @@ export const SiderImage = styled.div<SiderImageProp>`
         width: 40%;
     };
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 414px){
         width: 100%;
     }
 `

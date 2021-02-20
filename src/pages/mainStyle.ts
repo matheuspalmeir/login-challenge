@@ -84,11 +84,11 @@ export const ChallengeButton = styled(Button)`
         animation: pulse 0.2s 1 ease-out;
     }
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 414px){
         position: absolute;
         width: 168px;
         left: 18%;
-        top: 30px;
+        top: 12px;
         box-shadow: none;
     };
 `;
@@ -109,10 +109,11 @@ export const Title = styled.div<PropFontSize>`
     color: ${props => props.fontColor};
     margin-bottom: 15px;
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 414px){
+        width: 160px;
         font-size: 24px;
         line-height: 30px;
-
+        margin-bottom: 5px;
     };
 
 `
@@ -125,10 +126,13 @@ export const Subtitle = styled.div<PropFontSize>`
   line-height: 20px;
   letter-spacing: 0em;
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 414px){
         font-size: 12px;
         line-height: 20px;
-
     };
   
+`
+
+export const IconImage = styled.img`
+  margin-bottom: 20px; 
 `
