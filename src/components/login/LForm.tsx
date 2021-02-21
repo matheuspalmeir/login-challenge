@@ -5,7 +5,7 @@ import {ChallengeButton } from '../../pages/mainStyle';
 import {InputLogin, FormItemLabel} from './style';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
-interface FormValuesI {
+export type FormValuesLogin = {
     email: string;
     password: string;    
 }
@@ -14,7 +14,7 @@ const LForm = (props: any) => {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
-    const handleFinishedForm = (values: FormValuesI) => {
+    const handleFinishedForm = (values: FormValuesLogin) => {
         const isMobile = window.innerWidth <= 375;
 
         message.success({

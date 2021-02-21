@@ -1,6 +1,6 @@
 import {SiderImage} from './style';
 
-interface SiderProp {
+type SiderProp = {
     url: string;
 }
 
