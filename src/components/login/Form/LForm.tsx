@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import FormErrorMessage from '../utils/FormErrorMessage';
+
 import { Form } from 'antd';
-import {ChallengeButton } from '../../pages/mainStyle';
-import {InputLogin, FormItemLabel} from './style';
+import FormErrorMessage from '../../utils/FormErrorMessage';
+import {ChallengeButton } from '../../../pages/mainStyle';
+import {InputLogin, FormItemLabel} from '../style';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 export type FormValuesLogin = {
@@ -15,11 +16,12 @@ export type LFormProps = {
 }
 
 const LForm = (props: LFormProps) => {
-    const [email, setEmail] = useState<string>('');
-    const [password, setPassword] = useState<string>('');
+    //const [email, setEmail] = useState<string>('');
+    //const [password, setPassword] = useState<string>('');
 
     return (
         <Form
+            data-testid="login-form"
             name="normal_login"
             className="login-form"
             layout={'vertical'}

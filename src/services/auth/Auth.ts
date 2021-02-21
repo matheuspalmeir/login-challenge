@@ -1,5 +1,4 @@
 import api from '../api/instance';
-import {FormValuesLogin} from '../../components/login/LForm';
 
 /* 
     @Undestanding

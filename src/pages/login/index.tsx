@@ -1,11 +1,11 @@
-import Footer from '../../components/login/Footer';
-import Header from '../../components/login/Header';
+import Footer from '../../components/login/Footer/Footer';
+import Header from '../../components/login/Header/Header';
 import {message} from 'antd';
-import LoginForm, {FormValuesLogin} from '../../components/login/LForm';
+import LoginForm, {FormValuesLogin} from '../../components/login/Form/LForm';
 import AuthService from '../../services/auth/Auth';
 import {ChallengeContainer} from '../mainStyle';
 
-const LoginPage = (props: any) => {
+const LoginPage = () => {
 
 
     const handleFormLoginFinished = async(credentials: FormValuesLogin) => {

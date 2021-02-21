@@ -56,14 +56,17 @@ export const ContainerFooter = styled.div`
     justify-content: center;
     align-items: center;
 
-    p{
-        color: #989FDB;
-        padding: 0px;
-        margin: 0px;
-    }
 
     @media screen and (max-width: 414px){
         position: absolute;
         bottom: -20%;
     }
+`
+
+export const TextFooter = styled.p`
+
+    color: #989FDB;
+    padding: 0px;
+    margin: 0px;
+    
 `
