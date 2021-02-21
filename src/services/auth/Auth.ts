@@ -17,7 +17,7 @@ export default {
         try {
             let fakeId = Math.floor(Math.random() * 3);
 
-            const response = await api.get(`/auth/:${fakeId}`);
+            const response = await api.get(`/auth/${fakeId}`);
             return response;
 
         } catch (error) {

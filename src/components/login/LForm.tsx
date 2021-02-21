@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import FormErrorMessage from '../utils/FormErrorMessage';
-import { Form, message } from 'antd';
+import { Form } from 'antd';
 import {ChallengeButton } from '../../pages/mainStyle';
 import {InputLogin, FormItemLabel} from './style';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
@@ -10,21 +10,13 @@ export type FormValuesLogin = {
     password: string;    
 }
 
-const LForm = (props: any) => {
+export type LFormProps = {
+    handleFormLoginFinished: (credentials: FormValuesLogin) => void
+}
+
+const LForm = (props: LFormProps) => {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
-
-    const handleFinishedForm = (values: FormValuesLogin) => {
-        const isMobile = window.innerWidth <= 375;
-
-        message.success({
-            content: 'Bem-vindo ao sistema!',
-            style: {
-                marginTop: isMobile ? '20%' : '0',
-                marginLeft: isMobile ? '10%' : '68%', 
-                width: '300px'},
-        });
-    }
 
     return (
         <Form
@@ -32,7 +24,7 @@ const LForm = (props: any) => {
             className="login-form"
             layout={'vertical'}
             requiredMark={false}
-            onFinish={handleFinishedForm}
+            onFinish={props.handleFormLoginFinished}
         >
             <Form.Item
                 name="email"
