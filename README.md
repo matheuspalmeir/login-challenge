@@ -27,7 +27,7 @@ git clone git@github.com:matheuspalmeir/login-challenge.git
 
 ```bash
 npm install
-or
+# or
 yarn 
 ```
 ## Running the project
