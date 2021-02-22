@@ -93,6 +93,19 @@ export const ChallengeButton = styled(Button)`
     };
 `;
 
+export const HomeButton = styled(ChallengeButton)`
+    @media screen and (max-width: 414px){
+        position: inherit;
+    };
+`
+
+export const WrapperButton = styled.div`
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
 export const ChallengeContainer = styled.div<ContainerProp>`
     width: 100%;
     display: flex;

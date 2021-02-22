@@ -8,11 +8,12 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 export type FormValuesLogin = {
     email: string;
-    password: string;    
+    password: string;  
 }
 
 export type LFormProps = {
-    handleFormLoginFinished: (credentials: FormValuesLogin) => void
+    handleFormLoginFinished: (credentials: FormValuesLogin) => void;
+    loading?: boolean;
 }
 
 const LForm = (props: LFormProps) => {
@@ -72,7 +73,7 @@ const LForm = (props: LFormProps) => {
                 />
             </Form.Item>
             <Form.Item>
-                <ChallengeButton data-testid="submit-button" htmlType="submit" type="primary" >ENTRAR</ChallengeButton> 
+                <ChallengeButton loading={props.loading} data-testid="submit-button" htmlType="submit" type="primary" >ENTRAR</ChallengeButton> 
             </Form.Item>
         </Form>
     )

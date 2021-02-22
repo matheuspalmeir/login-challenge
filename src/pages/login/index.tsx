@@ -1,22 +1,27 @@
 import Footer from '../../components/login/Footer/Footer';
 import Header from '../../components/login/Header/Header';
 import {message} from 'antd';
+import {useState} from 'react';
 import LoginForm, {FormValuesLogin} from '../../components/login/Form/LForm';
 import AuthService from '../../services/auth/Auth';
 import {ChallengeContainer} from '../mainStyle';
 
 const LoginPage = () => {
-
+    const [loading, setLoading] = useState(false);
 
     const handleFormLoginFinished = async(credentials: FormValuesLogin) => {
+        setLoading(true);
+
         const dataResponse = await AuthService.login();
 
         if(!dataResponse){
             showMessage('error', 'Não foi possível logar!');
+            setLoading(false);
             return;
         }
 
         showMessage('success', 'Bem-vindo ao sistema!');
+        setLoading(false);
     }
 
     const showMessage = (type : string, content : string) => {
@@ -34,7 +39,7 @@ const LoginPage = () => {
     return(
         <ChallengeContainer>
             <Header />
-            <LoginForm {...{handleFormLoginFinished}}/>
+            <LoginForm {...{handleFormLoginFinished, loading}}/>
             <Footer/>
         </ChallengeContainer>
     )
