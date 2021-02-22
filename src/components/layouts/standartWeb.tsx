@@ -1,7 +1,7 @@
 import {LayoutContainer, LayoutContent} from './style';
 import Sider from './Sider';
 
-interface StandartWebProp {
+type StandartWebProp = {
     children: any;
 }
 

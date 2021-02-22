@@ -4,15 +4,15 @@ import styled,{createGlobalStyle} from 'styled-components';
 const MontserratRegular = '/fonts/Montserrat/Montserrat-Regular.woff';
 const MontserratThin = '/fonts/Montserrat/Montserrat-Thin.woff';
 const MontserratSemiBold = '/fonts/Montserrat/Montserrat-SemiBold.woff';
-interface PropFontSize{
+
+type FontSizeType = {
     size?: string,
     aligment?: string,
     fontColor?: string,
 }
 
-interface PropContainer{
+type ContainerProp = {
     aligment?: string,
-
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -93,7 +93,20 @@ export const ChallengeButton = styled(Button)`
     };
 `;
 
-export const ChallengeContainer = styled.div<PropContainer>`
+export const HomeButton = styled(ChallengeButton)`
+    @media screen and (max-width: 414px){
+        position: inherit;
+    };
+`
+
+export const WrapperButton = styled.div`
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const ChallengeContainer = styled.div<ContainerProp>`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -103,7 +116,7 @@ export const ChallengeContainer = styled.div<PropContainer>`
     padding-top: 30px;
 `
 
-export const Title = styled.div<PropFontSize>`
+export const Title = styled.div<FontSizeType>`
     font-size: ${props => props.size || '48px'};
     line-height: 48px;
     color: ${props => props.fontColor};
@@ -118,7 +131,7 @@ export const Title = styled.div<PropFontSize>`
 
 `
 
-export const Subtitle = styled.div<PropFontSize>`
+export const Subtitle = styled.div<FontSizeType>`
   font-size: ${props => props.size || '16px'};
   text-align: ${props => props.aligment || 'center'};
   color: ${props => props.fontColor};

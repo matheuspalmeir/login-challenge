@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ErrorProps{
+type ErrorProps = {
     txt: string;
 }
 

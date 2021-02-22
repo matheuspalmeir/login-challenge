@@ -1,6 +1,6 @@
 import {LayoutContainer} from './style';
 
-interface FullscrenWebProp {
+type FullscrenWebProp = {
     children: any;
 }
 

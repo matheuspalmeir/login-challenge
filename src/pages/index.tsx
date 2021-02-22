@@ -1,7 +1,8 @@
 import React from 'react';
 import {useRouter} from 'next/router';
 import {
-  	ChallengeButton, 
+	HomeButton, 
+	WrapperButton,
   	ChallengeContainer, 
   	Title, Subtitle, IconImage
 } from './mainStyle';
@@ -17,8 +18,8 @@ const SmileImagePath = '/images/smile.png';
 
 	return (
 		<ChallengeContainer>
-			<Title>Welcome to my Login Challenge!</Title>
-			<Subtitle>
+			<Title style={{textAlign: 'center'}}>Welcome to my Login Challenge!</Title>
+			<Subtitle style={{padding: '15px'}}>
 				I hope you like the code and the experience!
 				<br/>
 				This challenge was developed with care, love and happiness :)
@@ -29,9 +30,9 @@ const SmileImagePath = '/images/smile.png';
 			</Subtitle>
 			<br/>
 			<IconImage src={SmileImagePath} alt="Do smile!" />
-			<ChallengeButton type="primary" onClick={handleClickCheckButton}>
+			<HomeButton type="primary" onClick={handleClickCheckButton}>
 				CHECK THIS OUT!
-			</ChallengeButton>
+			</HomeButton>
 		</ChallengeContainer>
 	)
 }
