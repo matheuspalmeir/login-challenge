@@ -42,3 +42,6 @@ yarn dev
 ## Checking the project on server (Production): 
 
 You can access this project from a mobile or desktop device [here](https://login-challenge-delta.vercel.app/)
+I created a home page to "break the ice" and to really take the Next JS file-system based router feature. So, after access the link, click on "Check this out" to test the login area! I hope you enjoy my challenge! 
+
+Thank you for your time! :)
