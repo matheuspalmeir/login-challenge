@@ -6,8 +6,6 @@ const optionsApi : AxiosRequestConfig = {
     responseType: 'json',
 };
 
-console.log("Options API:", optionsApi);
-
 const api : AxiosInstance = axios.create(optionsApi);
 
 api.interceptors.request.use(async (config : AxiosRequestConfig) => {

@@ -7,7 +7,7 @@ describe("<Header />", () => {
         
       const {findByTestId} = render(<Header />)
 
-      const welcomeMessage = await findByTestId('welbome-message');
+      const welcomeMessage = await findByTestId('welcome-message');
       const instructionMessage = await findByTestId('instruction-message');
 
       expect(welcomeMessage).toBeInTheDocument();

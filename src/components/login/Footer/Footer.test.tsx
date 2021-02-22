@@ -2,7 +2,6 @@ import Footer from './Footer';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-
 describe("<Footer />", () => {
     test("should display two texts, one is a question, the other a link", async () => {
         

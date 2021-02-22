@@ -9,10 +9,7 @@ const LoginPage = () => {
 
 
     const handleFormLoginFinished = async(credentials: FormValuesLogin) => {
-        console.log("Credentials:", credentials); 
-
         const dataResponse = await AuthService.login();
-        console.log("Res:", dataResponse);
 
         if(!dataResponse){
             showMessage('error', 'Não foi possível logar!');

@@ -26,6 +26,7 @@ const LForm = (props: LFormProps) => {
             className="login-form"
             layout={'vertical'}
             requiredMark={false}
+            initialValues={{email: "", password: ""}}
             onFinish={props.handleFormLoginFinished}
         >
             <Form.Item
@@ -48,6 +49,7 @@ const LForm = (props: LFormProps) => {
                     prefix={<UserOutlined className="site-form-item-icon" />} 
                     placeholder="user.name@gmail.com"
                     size="small"
+                    data-testid="input-email"
                 />
             </Form.Item>
             <Form.Item
@@ -66,10 +68,11 @@ const LForm = (props: LFormProps) => {
                     type="password"
                     placeholder="*********"
                     size="small" 
+                    data-testid="input-password"
                 />
             </Form.Item>
             <Form.Item>
-                <ChallengeButton htmlType="submit" type="primary" >ENTRAR</ChallengeButton> 
+                <ChallengeButton data-testid="submit-button" htmlType="submit" type="primary" >ENTRAR</ChallengeButton> 
             </Form.Item>
         </Form>
     )
