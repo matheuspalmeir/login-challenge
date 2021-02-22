@@ -1,6 +1,3 @@
-
-console.log("Environment:", process.env.NODE_ENV);
-
 type configApi = {
     port?: string | number,
     baseUrl: string

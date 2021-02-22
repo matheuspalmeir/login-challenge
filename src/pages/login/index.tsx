@@ -4,7 +4,7 @@ import {message} from 'antd';
 import {useState} from 'react';
 import LoginForm, {FormValuesLogin} from '../../components/login/Form/LForm';
 import AuthService from '../../services/auth/Auth';
-import {ChallengeContainer} from '../mainStyle';
+import {ChallengeContainer} from '../../styles/mainStyle';
 
 const LoginPage = () => {
     const [loading, setLoading] = useState(false);

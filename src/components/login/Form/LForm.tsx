@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import { Form } from 'antd';
 import FormErrorMessage from '../../utils/FormErrorMessage';
-import {ChallengeButton } from '../../../pages/mainStyle';
+import {ChallengeButton } from '../../../styles/mainStyle';
 import {InputLogin, FormItemLabel} from '../style';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 

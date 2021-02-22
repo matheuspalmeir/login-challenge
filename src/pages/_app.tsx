@@ -1,6 +1,6 @@
 
 import 'antd/dist/antd.css';
-import {GlobalStyle} from './mainStyle';
+import {GlobalStyle} from '../styles/mainStyle';
 import StandartWeb from '../components/layouts/standartWeb';
 import FullscreenWeb from '../components/layouts/FullscreenWeb';;
 import {useRouter} from 'next/router';

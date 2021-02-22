@@ -3,7 +3,7 @@ import {
     ChallengeButton, 
     ChallengeContainer, 
     Title, Subtitle, IconImage
-} from './mainStyle';
+} from '../styles/mainStyle';
 
 const SadImagePath = '/images/sad.png';
 

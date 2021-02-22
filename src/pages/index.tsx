@@ -5,7 +5,7 @@ import {
 	WrapperButton,
   	ChallengeContainer, 
   	Title, Subtitle, IconImage
-} from './mainStyle';
+} from '../styles/mainStyle';
 
 const SmileImagePath = '/images/smile.png';
 

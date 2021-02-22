@@ -1,4 +1,4 @@
-import {Title, Subtitle} from '../../../pages/mainStyle';
+import {Title, Subtitle} from '../../../styles/mainStyle';
 import {ContainerHeader} from '../style';
 
 const Header = () => {
